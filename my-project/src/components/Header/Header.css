@@ -1,0 +1,137 @@
+.header {
+    background-color: #6B3CC9; /* Your specified color */
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo {
+    font-size: 24px;
+    font-weight: bold;
+  }
+
+  .logo img {
+    height: 40px;
+    margin-left: 5px;
+    padding-right: 15px;
+  }
+  
+  .navbar .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  
+  .navbar .nav-links li a {
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .navbar .nav-links li a:hover {
+    background-color: #5a2da0; /* A slightly darker shade for hover effect */
+    border-radius: 5px;
+  }
+  
+  @media (max-width: 768px) {
+    .header {
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+    }
+  
+    .logo {
+      font-size: 20px;
+      padding-bottom: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  
+    .logo img {
+      height: 30px;
+    }
+  
+    .navbar .nav-links {
+      flex-direction: column;
+      align-items: center;
+      padding: 0;
+    }
+  
+    .navbar .nav-links li {
+      padding: 10px 0; /* More vertical padding for better tap targets */
+    }
+  
+    .navbar .nav-links li a {
+      padding: 8px 15px;
+    }
+  }
+  
+  /* Existing styles ... */
+
+.menu-toggle {
+  display: none;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* This will only take effect when the menu is open */
+.header.menu-open .nav-links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Media query for max-width of 375px */
+@media (max-width: 375px) {
+
+  .header {
+    position: relative;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+  
+  .navbar {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    left: 0;
+    background-color: #6B3CC9;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    align-items: center;
+    z-index: 10;
+  }
+
+  .navbar.show {
+    display: block;
+    flex-direction: column;
+  }
+
+  .nav-links {
+    width: 100%;
+  }
+
+
+  .nav-links li a {
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+  }
+}
