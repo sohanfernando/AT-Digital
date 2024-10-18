@@ -1,48 +1,99 @@
-/* FAQ.css */
 .faq-section {
-    background-color: #ffffff; /* Adjust color as needed */
-    padding: 20px;
+  background-color: #ffffff;
+  padding: 20px;
+}
+
+.faq-section h2 {
+  text-align: center;
+  color: #6B3CC9;
+  margin-bottom: 20px;
+}
+
+.faq-item {
+  background-color: #ffffff;
+  border-bottom: 2px solid #eee;
+}
+
+.faq-question {
+  background: none;
+  border: none;
+  width: 100%;
+  text-align: left;
+  padding: 20px;
+  font-size: 1.25rem;
+  color: #6B3CC9;
+  cursor: pointer;
+  position: relative;
+}
+
+.faq-toggle {
+  position: absolute;
+  right: 20px;
+  font-size: 1.5rem;
+  color: #6B3CC9;
+}
+
+.faq-answer {
+  padding: 0 20px 20px;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #333;
+  display: none;
+}
+
+.faq-item.open .faq-answer {
+  display: block;
+}
+
+@media (min-width: 1440px) {
+  .faq-section {
+      padding: 40px 80px; /* Increased padding for larger screens */
   }
-  
-  .faq-section h2 {
-    text-align: center;
-    color: #6B3CC9; /* The color seems to be a theme for your titles */
-    margin-bottom: 20px;
-  }
-  
-  .faq-item {
-    background-color: #ffffff;
-    border-bottom: 2px solid #eee; /* Adjust color as needed */
-  }
-  
+
   .faq-question {
-    background: none;
-    border: none;
-    width: 100%;
-    text-align: left;
-    padding: 20px;
-    font-size: 1.25rem;
-    color: #6B3CC9; /* Matching the color of the title for the question */
-    cursor: pointer;
-    position: relative;
+      font-size: 1.5rem; /* Larger font size for better readability */
   }
-  
+}
+
+@media (min-width: 1200px) and (max-width: 1439px) {
+  .faq-section {
+      padding: 30px 60px; /* Slightly less padding than the largest breakpoint */
+  }
+
+  .faq-question {
+      font-size: 1.4rem; /* Adjust font size */
+  }
+}
+
+@media (max-width: 768px) {
+  .faq-section {
+      padding: 20px 30px; /* Adjust padding */
+  }
+
+  .faq-question {
+      font-size: 1.2rem; /* Slightly smaller font size for smaller screens */
+  }
+
   .faq-toggle {
-    position: absolute;
-    right: 20px;
-    font-size: 1.5rem;
-    color: #6B3CC9; /* Same color for the + and - signs */
+      font-size: 1.25rem; /* Smaller toggle icon */
   }
-  
+}
+
+@media (max-width: 375px) {
+  .faq-section {
+      padding: 15px 20px; /* Smaller padding for very small screens */
+  }
+
+  .faq-question {
+      font-size: 1rem; /* Smaller font size to fit small screens */
+      padding: 15px; /* Adjust padding */
+  }
+
+  .faq-toggle {
+      font-size: 1.1rem; /* Further reduce the toggle icon size */
+  }
+
   .faq-answer {
-    padding: 0 20px 20px;
-    font-size: 1rem;
-    line-height: 1.5;
-    color: #333; /* Dark color for text */
-    display: none; /* Hidden by default */
+      font-size: 0.9rem; /* Smaller text in answers for readability */
   }
-  
-  .faq-item.open .faq-answer {
-    display: block; /* Show answer when open */
-  }
-  
+}

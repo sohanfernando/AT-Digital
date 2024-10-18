@@ -36,16 +36,43 @@
     border-radius: 5px;
   }
   
+  @media (min-width: 1440px) {
+    .header {
+      padding: 10px 50px; /* More horizontal padding for larger screens */
+    }
+  
+    .logo {
+      font-size: 28px; /* Slightly larger font for better readability */
+    }
+  
+    .navbar .nav-links {
+      gap: 30px; /* Increased gap between navigation links for more space */
+    }
+  }
+
+  @media (min-width: 1200px) and (max-width: 1439px) {
+    .header {
+      padding: 10px 40px; /* Slightly less padding than the largest breakpoint */
+    }
+  
+    .logo {
+      font-size: 26px; /* Adjusting font size for optimal readability */
+    }
+  
+    .navbar .nav-links {
+      gap: 25px; /* Moderate gap for navigation links */
+    }
+  }
+
   @media (max-width: 768px) {
     .header {
-      flex-direction: column;
       justify-content: space-between;
       align-items: center;
       padding: 20px;
     }
   
     .logo {
-      font-size: 20px;
+      font-size: 18px;
       padding-bottom: 10px;
       display: flex;
       justify-content: center;
@@ -53,17 +80,18 @@
     }
   
     .logo img {
-      height: 30px;
+      height: 25px;
     }
   
     .navbar .nav-links {
-      flex-direction: column;
+      flex-direction: row;
       align-items: center;
       padding: 0;
+      gap: 10px;
     }
   
     .navbar .nav-links li {
-      padding: 10px 0; /* More vertical padding for better tap targets */
+      padding: 10px 0;
     }
   
     .navbar .nav-links li a {
