@@ -1,5 +1,6 @@
 import React from 'react';
 import ServiceCard from '../ServiceCard/ServiceCard';
+import './ServiceSection.css';
 import image1 from '../../images/image1.png';
 import image2 from '../../images/image2.png';
 
@@ -20,7 +21,7 @@ function ServiceSection() {
   ];
 
   return (
-    <section>
+    <section className="service-section">
       <div className="services-container">
         {services.map((service) => (
           <ServiceCard 

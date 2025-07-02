@@ -1,21 +1,19 @@
 .hero {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     text-align: left;
     background-size: cover;
     background-position: center;
     height: 763px;
-    padding-top: 90px;
-    padding-right: 150px;
+    padding: 90px 150px 90px 80px;
     color: #fff;
+    position: relative;
   }
   
   .hero-content {
-    width: 630px;
-    margin-top: 300px;
-    margin-left: 80px;
-    margin-right: auto;
+    max-width: 630px;
+    margin-top: 200px;
     padding: 24px 40px 32px 40px;
     background: linear-gradient(135deg, #1CBDDD, #4DCA79);
     display: flex;
@@ -26,7 +24,7 @@
   
   .hero h1 {
     font-size: 48px;
-    margin-bottom: 30px;
+    margin: 0 0 30px 0;
     line-height: 48px;
     font-weight: 700;
   }
@@ -35,41 +33,106 @@
     width: 250px;
     padding: 12px 20px;
     margin-bottom: 30px;
+    border: none;
     border-radius: 4px;
     background-color: #F28D35;
     color: white;
+    font-weight: 600;
     cursor: pointer;
-    align-self: stretch; /* If you want the button to stretch full width inside the .hero-content */
     text-align: center;
+    transition: background-color 0.3s ease;
   }
-  
-  
+
+  .hero-button:hover {
+    background-color: #e07a28;
+  }
+
+  /* Large tablets and small laptops */
+  @media (max-width: 1024px) {
+    .hero {
+      padding: 60px 80px;
+      height: 600px;
+    }
+
+    .hero-content {
+      margin-top: 100px;
+      max-width: 500px;
+    }
+
+    .hero h1 {
+      font-size: 42px;
+      line-height: 46px;
+    }
+  }
+
+  /* Tablets */
   @media (max-width: 768px) {
     .hero {
-        padding-top: 30px; /* Reduced padding */
-        padding-right: 30px; /* Same as above */
-        padding-left: 30px; /* Add padding to the left to match the right padding */
-        height: auto;
+      padding: 40px;
+      height: auto;
+      min-height: 500px;
+      justify-content: center;
     }
-  
+
     .hero-content {
-        width: auto; /* Take the full width of the .hero container */
-        margin-top: 0; /* Reset margins for mobile */
-        padding: 24px; /* Uniform padding */
-        gap: 10px; /* Adjust gap for mobile */
+      width: 100%;
+      max-width: none;
+      margin-top: 50px;
+      padding: 20px;
     }
-  
+
     .hero h1 {
-        font-size: 36px; /* Smaller font size for smaller screens */
-        margin-bottom: 20px; /* Adjust spacing */
-        line-height: 42px; /* Adjust line height accordingly */
+      font-size: 36px;
+      line-height: 42px;
+      margin-bottom: 20px;
     }
-  
+
     .hero-button {
-        width: auto; /* Allow the button to take necessary width */
-        padding: 12px; /* Keep padding uniform */
-        margin-left: 0; /* Reset any specific margins for mobile */
-        margin-bottom: 20px; /* Adjust as needed */
+      width: 100%;
+      max-width: 250px;
+      margin-bottom: 20px;
+    }
+  }
+
+  /* Mobile devices */
+  @media (max-width: 480px) {
+    .hero {
+      padding: 20px;
+      min-height: 400px;
+    }
+
+    .hero-content {
+      padding: 16px;
+      margin-top: 20px;
+    }
+
+    .hero h1 {
+      font-size: 28px;
+      line-height: 32px;
+      margin-bottom: 15px;
+    }
+
+    .hero-button {
+      width: 100%;
+      padding: 14px 16px;
+      margin-bottom: 15px;
+      font-size: 14px;
+    }
+  }
+
+  /* Very small devices */
+  @media (max-width: 320px) {
+    .hero {
+      padding: 15px;
+    }
+
+    .hero-content {
+      padding: 12px;
+    }
+
+    .hero h1 {
+      font-size: 24px;
+      line-height: 28px;
     }
   }
   
