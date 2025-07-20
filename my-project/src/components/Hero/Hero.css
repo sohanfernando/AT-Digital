@@ -1,75 +1,217 @@
 .hero {
-    display: flex;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 500px;
+  padding: 40px 20px;
+  color: #fff;
+  position: relative;
+}
+
+.hero-content {
+  max-width: 600px;
+  padding: 30px 40px;
+  background: linear-gradient(135deg, #1CBDDD, #4DCA79);
+  border-radius: 8px;
+  margin-left: 0;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.hero h1 {
+  font-size: 32px;
+  margin-bottom: 24px;
+  line-height: 1.3;
+  font-weight: 700;
+}
+
+.hero-button {
+  padding: 14px 24px;
+  border: none;
+  border-radius: 4px;
+  background-color: #F28D35;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  min-width: 200px;
+}
+
+.hero-button:hover {
+  background-color: #e07b2a;
+  transform: translateY(-2px);
+}
+
+.hero-button:active {
+  transform: translateY(0);
+}
+
+/* Small mobile styles */
+@media (max-width: 480px) {
+  .hero {
+    min-height: 400px;
+    padding: 30px 15px;
     justify-content: center;
-    align-items: center;
-    text-align: left;
-    background-size: cover;
-    background-position: center;
-    height: 763px;
-    padding-top: 90px;
-    padding-right: 150px;
-    color: #fff;
+    text-align: center;
   }
   
   .hero-content {
-    width: 630px;
-    margin-top: 300px;
+    max-width: 100%;
+    padding: 24px 20px;
+    margin-left: 0;
+  }
+  
+  .hero h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    line-height: 1.4;
+  }
+  
+  .hero-button {
+    padding: 12px 20px;
+    font-size: 14px;
+    min-width: 180px;
+  }
+}
+
+/* Mobile styles */
+@media (min-width: 481px) and (max-width: 768px) {
+  .hero {
+    min-height: 450px;
+    padding: 35px 20px;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .hero-content {
+    max-width: 90%;
+    padding: 28px 30px;
+    margin-left: 0;
+  }
+  
+  .hero h1 {
+    font-size: 28px;
+    margin-bottom: 22px;
+    line-height: 1.35;
+  }
+  
+  .hero-button {
+    padding: 13px 22px;
+    font-size: 15px;
+    min-width: 190px;
+  }
+}
+
+/* Tablet styles */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .hero {
+    min-height: 550px;
+    padding: 40px 30px;
+    justify-content: flex-start;
+  }
+  
+  .hero-content {
+    max-width: 550px;
+    padding: 32px 36px;
+    margin-left: 30px;
+  }
+  
+  .hero h1 {
+    font-size: 36px;
+    margin-bottom: 26px;
+    line-height: 1.3;
+  }
+  
+  .hero-button {
+    padding: 14px 24px;
+    font-size: 16px;
+    min-width: 200px;
+  }
+}
+
+/* Desktop styles */
+@media (min-width: 1025px) and (max-width: 1199px) {
+  .hero {
+    min-height: 600px;
+    padding: 50px 40px;
+    justify-content: flex-start;
+  }
+  
+  .hero-content {
+    max-width: 580px;
+    padding: 35px 40px;
+    margin-left: 50px;
+  }
+  
+  .hero h1 {
+    font-size: 40px;
+    margin-bottom: 28px;
+    line-height: 1.25;
+  }
+  
+  .hero-button {
+    padding: 15px 26px;
+    font-size: 16px;
+    min-width: 220px;
+  }
+}
+
+/* Large desktop styles */
+@media (min-width: 1200px) and (max-width: 1439px) {
+  .hero {
+    min-height: 650px;
+    padding: 60px 50px;
+    justify-content: flex-start;
+  }
+  
+  .hero-content {
+    max-width: 600px;
+    padding: 38px 42px;
+    margin-left: 60px;
+  }
+  
+  .hero h1 {
+    font-size: 44px;
+    margin-bottom: 30px;
+    line-height: 1.2;
+  }
+  
+  .hero-button {
+    padding: 16px 28px;
+    font-size: 17px;
+    min-width: 240px;
+  }
+}
+
+/* Extra large desktop styles */
+@media (min-width: 1440px) {
+  .hero {
+    min-height: 700px;
+    padding: 70px 60px;
+    justify-content: flex-start;
+  }
+  
+  .hero-content {
+    max-width: 630px;
+    padding: 40px 45px;
     margin-left: 80px;
-    margin-right: auto;
-    padding: 24px 40px 32px 40px;
-    background: linear-gradient(135deg, #1CBDDD, #4DCA79);
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 15px;
   }
   
   .hero h1 {
     font-size: 48px;
-    margin-bottom: 30px;
-    line-height: 48px;
-    font-weight: 700;
+    margin-bottom: 32px;
+    line-height: 1.2;
   }
   
   .hero-button {
-    width: 250px;
-    padding: 12px 20px;
-    margin-bottom: 30px;
-    border-radius: 4px;
-    background-color: #F28D35;
-    color: white;
-    cursor: pointer;
-    align-self: stretch; /* If you want the button to stretch full width inside the .hero-content */
-    text-align: center;
+    padding: 18px 30px;
+    font-size: 18px;
+    min-width: 250px;
   }
-  
-  
-  @media (max-width: 768px) {
-    .hero {
-        padding-top: 30px; /* Reduced padding */
-        padding-right: 30px; /* Same as above */
-        padding-left: 30px; /* Add padding to the left to match the right padding */
-        height: auto;
-    }
-  
-    .hero-content {
-        width: auto; /* Take the full width of the .hero container */
-        margin-top: 0; /* Reset margins for mobile */
-        padding: 24px; /* Uniform padding */
-        gap: 10px; /* Adjust gap for mobile */
-    }
-  
-    .hero h1 {
-        font-size: 36px; /* Smaller font size for smaller screens */
-        margin-bottom: 20px; /* Adjust spacing */
-        line-height: 42px; /* Adjust line height accordingly */
-    }
-  
-    .hero-button {
-        width: auto; /* Allow the button to take necessary width */
-        padding: 12px; /* Keep padding uniform */
-        margin-left: 0; /* Reset any specific margins for mobile */
-        margin-bottom: 20px; /* Adjust as needed */
-    }
-  }
+}
   

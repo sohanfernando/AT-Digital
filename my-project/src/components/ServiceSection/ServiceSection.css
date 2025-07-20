@@ -1,0 +1,47 @@
+.services-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 20px;
+}
+
+/* Small mobile styles */
+@media (max-width: 480px) {
+  .services-container {
+    padding: 40px 15px;
+  }
+}
+
+/* Mobile styles */
+@media (min-width: 481px) and (max-width: 768px) {
+  .services-container {
+    padding: 50px 20px;
+  }
+}
+
+/* Tablet styles */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .services-container {
+    padding: 55px 30px;
+  }
+}
+
+/* Desktop styles */
+@media (min-width: 1025px) and (max-width: 1199px) {
+  .services-container {
+    padding: 65px 40px;
+  }
+}
+
+/* Large desktop styles */
+@media (min-width: 1200px) and (max-width: 1439px) {
+  .services-container {
+    padding: 70px 50px;
+  }
+}
+
+/* Extra large desktop styles */
+@media (min-width: 1440px) {
+  .services-container {
+    padding: 80px 60px;
+  }
+}

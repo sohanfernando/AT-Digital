@@ -1,50 +1,71 @@
 .service-card {
   display: flex;
-  height: 230px;
   align-items: center;
   justify-content: space-between;
-  padding: 20px;
-  border-radius: 8px;
-  margin-bottom: 20px;
+  padding: 40px 20px;
+  margin-bottom: 40px;
+  gap: 30px;
   transition: box-shadow 0.3s ease;
 }
 
-
 .service-image {
-  width: 400px;
-  height: 300px;
-  margin-right: 22px;
+  flex: 0 0 350px;
+  height: 280px;
+  overflow: hidden;
+  border-radius: 8px;
 }
 
-.service-content {
-  flex-grow: 1;
+.service-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.service-info {
+  flex: 1;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-}
-
-.service-title {
-  margin-bottom: 10px;
-  font-size: 1.5rem;
+  gap: 20px;
 }
 
 .service-info h3 {
   color: #6B3CC9;
+  font-size: 28px;
+  font-weight: 600;
+  margin: 0;
+  line-height: 1.3;
+}
+
+.service-info p {
+  color: #333;
+  font-size: 16px;
+  line-height: 1.6;
+  margin: 0;
 }
 
 .service-button {
   background-color: #F28D35;
   color: white;
   border: none;
-  padding: 10px 20px;
+  padding: 12px 24px;
   text-transform: uppercase;
   border-radius: 4px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .service-button:hover {
-  background-color: #cc8400;
+  background-color: #e07b2a;
+  transform: translateY(-2px);
+}
+
+.service-button:active {
+  transform: translateY(0);
 }
 
 .image-left {
@@ -55,62 +76,165 @@
   order: 1;
 }
 
-/* Media query for max-width of 1440px */
-@media (min-width: 1201px) {
+/* Small mobile styles */
+@media (max-width: 480px) {
   .service-card {
-      /* Adjustments for screens between 1201px and 1440px */
-      padding: 40px; /* Increased padding for larger screens */
-  }
-}
-
-/* Media query for max-width of 1200px */
-@media (max-width: 1200px) {
-  .service-card {
-      /* Adjustments for screens up to 1200px wide */
-      padding: 30px; /* Slightly reduced padding */
-      height: auto; /* Let the height be dynamic based on content */
-  }
-}
-
-/* Media query for max-width of 768px */
-@media (max-width: 768px) {
-  .service-card {
-      flex-direction: column;
-      padding: 20px;
+    flex-direction: column;
+    padding: 20px 15px;
+    margin-bottom: 30px;
+    gap: 20px;
+    text-align: center;
   }
   
   .service-image {
-      margin-right: 0;
-      margin-bottom: 15px;
+    flex: none;
+    width: 100%;
+    height: 200px;
+    order: -1 !important;
   }
   
-  .service-content {
-      align-items: center;
-      text-align: center;
+  .service-info {
+    align-items: center;
+    text-align: center;
+    gap: 15px;
   }
   
-  .image-left,
-  .image-right {
-      order: initial;
-  }
-}
-
-/* Media query for max-width of 375px */
-@media (max-width: 375px) {
-  .service-card {
-      padding: 15px;
+  .service-info h3 {
+    font-size: 20px;
   }
   
-  .service-content,
-  .service-image {
-      align-items: center;
+  .service-info p {
+    font-size: 14px;
   }
   
-  .service-title {
-      font-size: 1.2rem; /* Reduce font size for small screens */
-  }
-
   .service-button {
-      padding: 8px 16px; /* Adjust button padding */
+    padding: 10px 20px;
+    font-size: 13px;
+  }
+}
+
+/* Mobile styles */
+@media (min-width: 481px) and (max-width: 768px) {
+  .service-card {
+    flex-direction: column;
+    padding: 30px 20px;
+    margin-bottom: 35px;
+    gap: 25px;
+    text-align: center;
+  }
+  
+  .service-image {
+    flex: none;
+    width: 100%;
+    height: 240px;
+    order: -1 !important;
+  }
+  
+  .service-info {
+    align-items: center;
+    text-align: center;
+    gap: 18px;
+  }
+  
+  .service-info h3 {
+    font-size: 24px;
+  }
+  
+  .service-info p {
+    font-size: 15px;
+    max-width: 90%;
+  }
+  
+  .service-button {
+    padding: 11px 22px;
+    font-size: 14px;
+  }
+}
+
+/* Tablet styles */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .service-card {
+    padding: 35px 25px;
+    margin-bottom: 40px;
+    gap: 25px;
+  }
+  
+  .service-image {
+    flex: 0 0 280px;
+    height: 220px;
+  }
+  
+  .service-info h3 {
+    font-size: 24px;
+  }
+  
+  .service-info p {
+    font-size: 15px;
+  }
+  
+  .service-button {
+    padding: 11px 22px;
+  }
+}
+
+/* Desktop styles */
+@media (min-width: 1025px) and (max-width: 1199px) {
+  .service-card {
+    padding: 40px 30px;
+    margin-bottom: 45px;
+    gap: 28px;
+  }
+  
+  .service-image {
+    flex: 0 0 320px;
+    height: 250px;
+  }
+  
+  .service-info h3 {
+    font-size: 26px;
+  }
+  
+  .service-info p {
+    font-size: 15px;
+  }
+}
+
+/* Large desktop styles */
+@media (min-width: 1200px) and (max-width: 1439px) {
+  .service-card {
+    padding: 45px 35px;
+    margin-bottom: 50px;
+    gap: 30px;
+  }
+  
+  .service-image {
+    flex: 0 0 340px;
+    height: 270px;
+  }
+  
+  .service-info h3 {
+    font-size: 27px;
+  }
+  
+  .service-info p {
+    font-size: 16px;
+  }
+}
+
+/* Extra large desktop styles */
+@media (min-width: 1440px) {
+  .service-card {
+    padding: 50px 40px;
+    margin-bottom: 55px;
+    gap: 32px;
+  }
+  
+  .service-image {
+    flex: 0 0 350px;
+    height: 280px;
+  }
+  
+  .service-info h3 {
+    font-size: 28px;
   }
 }
