@@ -14,7 +14,7 @@ function Footer() {
             Your goal is our target. Not anything in between. We use online marketing platforms and tools to achieve single objective - your business results.
           </p>
         </div>
-        {/* Responsive row for services/technologies at sm and above, column below sm */}
+        
         <div className="flex flex-col sm:flex-row gap-8 w-full sm:w-auto">
           <div className="flex-1 min-w-[150px]">
             <h4 className="text-lg font-semibold mb-2">Our Technologies</h4>

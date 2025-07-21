@@ -1,4 +1,3 @@
-// FAQSection.js
 import React from 'react';
 import FAQItem from './FAQItem';
 

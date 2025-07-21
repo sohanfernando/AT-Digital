@@ -1,4 +1,3 @@
-// FAQItem.js
 import React, { useState } from 'react';
 
 function FAQItem({ question, answer }) {

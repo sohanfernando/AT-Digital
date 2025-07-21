@@ -1,4 +1,3 @@
-// Hero.js
 import React from 'react';
 import heroBackground from '../images/hero-background.jpeg';
 
@@ -16,8 +15,6 @@ function Hero({
 }) {
   return (
     <section className="relative w-full min-h-[420px] flex items-center justify-center overflow-hidden 2xl:h-[600px]">
-      {/* Desktop: overlay box on image; Mobile/Tablet: vertical split */}
-      {/* Background image always fills */}
       <img
         src={backgroundImage}
         alt="Hero background"
@@ -25,7 +22,7 @@ function Hero({
         aria-hidden="true"
         draggable="false"
       />
-      {/* Overlay box for desktop */}
+
       <div className={`hidden md:flex absolute left-12 2xl:left-32 top-1/2 -translate-y-1/2 w-[600px] max-w-xl bg-gradient-to-r ${gradient} rounded-none 2xl:rounded-lg p-8 2xl:p-12 shadow-lg flex-col z-10`}>
         <h1 className="text-white text-3xl lg:text-4xl xl:text-5xl font-extrabold mb-8 leading-tight">
           {title}
@@ -37,7 +34,7 @@ function Hero({
           {buttonText}
         </button>
       </div>
-      {/* Mobile/Tablet: vertical split */}
+
       <div className="flex flex-col w-full md:hidden">
         <div className="w-full h-[220px] sm:h-[260px]">
           <img

@@ -1,18 +1,18 @@
-import FAQSection from './components/FAQSection.js';
-import Footer from './components/Footer.js';
-import Header from './components/Header.js';
-import Hero from './components/Hero.js';
-import ServiceSection from './components/ServiceSection.js';
+import FAQSection from './components/FAQSection.jsx';
+import Footer from './components/Footer.jsx';
+import Navbar from './components/Navbar.jsx';
+import Hero from './components/Hero.jsx';
+import ServiceSection from './components/ServiceSection.jsx';
 
 function App() {
   return (
     <>
-        <Header />
-        <Hero />
-        <ServiceSection/>
-        <FAQSection/>
-        <Footer/>
-      </>
+      <Navbar />
+      <Hero />
+      <ServiceSection/>
+      <FAQSection/>
+      <Footer/>
+    </>
   );
 }
 
