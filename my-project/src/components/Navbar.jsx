@@ -15,7 +15,7 @@ function Header() {
         <span className="tracking-wide">at digital</span>
       </div>
       <nav className="hidden md:block">
-        <ul className="flex gap-8 text-base font-medium">
+        <ul className="flex gap-8 text-base">
           <li><a href="#services" className="hover:underline">SERVICES</a></li>
           <li><a href="#about-us" className="hover:underline">ABOUT US</a></li>
           <li><a href="#contact" className="hover:underline">CONTACT US</a></li>
