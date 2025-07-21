@@ -9,8 +9,8 @@ function Header() {
   };
 
   return (
-    <header className="w-full bg-primary text-white flex items-center justify-between px-8 py-4 shadow-md">
-      <div className="flex items-center gap-2 text-xl font-bold">
+    <header className="w-full bg-primary text-white flex items-center justify-between px-8 py-6 shadow-md">
+      <div className="flex items-center gap-2 text-2xl font-bold">
         <img src={atlogo} alt='AT DIGITAL logo' className="h-8 w-8" />
         <span className="tracking-wide">at digital</span>
       </div>

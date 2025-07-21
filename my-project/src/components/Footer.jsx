@@ -6,7 +6,7 @@ function Footer() {
     <footer className="w-full bg-primary text-white pt-10 pb-4 px-4 mt-12">
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between gap-8 md:gap-0">
         <div className="flex-1 mb-8 md:mb-0">
-          <div className="flex items-center gap-2 text-xl font-bold mb-2">
+          <div className="flex items-center gap-2 text-2xl font-bold mb-2">
             <img src={atlogo} alt="AT Digital Logo" className="h-8 w-8" />
             <span className="tracking-wide">at digital</span>
           </div>

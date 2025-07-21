@@ -4,13 +4,13 @@ function FAQItem({ question, answer }) {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className={`bg-white rounded-lg shadow p-4 transition-all ${isOpen ? 'ring-2 ring-primary' : ''}`}> 
+    <div className={`bg-[#FAF8FF] p-4 transition-all`}> 
       <button
-        className="w-full flex justify-between items-center text-left text-dark font-medium text-base focus:outline-none"
+        className={`w-full flex justify-between items-center text-left font-medium text-base focus:outline-none ${isOpen ? 'text-primary' : 'text-dark'}`}
         onClick={() => setIsOpen(!isOpen)}
       >
         <span>{question}</span>
-        <span className="ml-4 text-primary text-xl font-bold">{isOpen ? '−' : '+'}</span>
+        <span className={`ml-4 text-xl font-bold ${isOpen ? 'text-primary' : 'text-dark'}`}>{isOpen ? '−' : '+'}</span>
       </button>
       {isOpen && (
         <p className="mt-3 text-text-light text-sm leading-relaxed">{answer}</p>

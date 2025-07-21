@@ -14,16 +14,16 @@ function Hero({
   onButtonClick,
 }) {
   return (
-    <section className="relative w-full min-h-[420px] flex items-center justify-center overflow-hidden 2xl:h-[600px]">
+    <section className="relative w-full min-h-[520px] md:min-h-[700px] lg:min-h-[800px] 2xl:h-[700px] flex items-center justify-center overflow-hidden">
       <img
         src={backgroundImage}
         alt="Hero background"
-        className="hidden md:block w-full h-full object-cover object-center absolute inset-0 z-0 pointer-events-none select-none 2xl:scale-100 2xl:object-center 2xl:h-[600px]"
+        className="hidden md:block w-full h-full object-cover object-center absolute inset-0 z-0 pointer-events-none select-none md:min-h-[700px] lg:min-h-[800px] 2xl:h-[700px]"
         aria-hidden="true"
         draggable="false"
       />
 
-      <div className={`hidden md:flex absolute left-12 2xl:left-32 top-1/2 -translate-y-1/2 w-[600px] max-w-xl bg-gradient-to-r ${gradient} rounded-none 2xl:rounded-lg p-8 2xl:p-12 shadow-lg flex-col z-10`}>
+      <div className={`hidden md:flex absolute left-12 2xl:left-32 top-1/2 md:translate-y-[1%] 2xl:translate-y-[1%] w-[600px] max-w-xl bg-gradient-to-r ${gradient} p-8 2xl:p-12 shadow-lg flex-col z-10`}>
         <h1 className="text-white text-3xl lg:text-4xl xl:text-5xl font-extrabold mb-8 leading-tight">
           {title}
         </h1>
@@ -36,7 +36,7 @@ function Hero({
       </div>
 
       <div className="flex flex-col w-full md:hidden">
-        <div className="w-full h-[220px] sm:h-[260px]">
+        <div className="w-full h-[320px] sm:h-[360px]">
           <img
             src={backgroundImage}
             alt="Hero background"

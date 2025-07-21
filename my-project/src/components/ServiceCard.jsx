@@ -4,7 +4,7 @@ function ServiceCard({ title, description, image, imagePosition }) {
   const isRight = imagePosition === 'right';
 
   return (
-    <div className={`flex flex-col md:flex-row ${isRight ? 'md:flex-row-reverse' : ''} items-center bg-white rounded-lg shadow-md overflow-hidden`}> 
+    <div className={`flex flex-col md:flex-row ${isRight ? 'md:flex-row-reverse' : ''} items-center bg-white overflow-hidden`}> 
       <div className="md:w-1/2 w-full flex justify-center items-center p-6">
         <img src={image} alt={title} className="max-w-[220px] w-full h-auto object-contain" />
       </div>
