@@ -20,8 +20,8 @@ function ServiceSection() {
   ];
 
   return (
-    <section>
-      <div className="services-container">
+    <section className="w-full py-12 bg-white">
+      <div className="max-w-5xl mx-auto flex flex-col gap-12">
         {services.map((service) => (
           <ServiceCard 
             key={service.title}

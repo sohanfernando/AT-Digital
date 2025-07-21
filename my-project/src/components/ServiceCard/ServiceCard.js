@@ -1,18 +1,19 @@
 import React from 'react';
-import './ServiceCard.css'; // Make sure to create a corresponding CSS file
 
 function ServiceCard({ title, description, image, imagePosition }) {
-  const imageClass = imagePosition === 'right' ? 'image-right' : 'image-left';
+  const isRight = imagePosition === 'right';
 
   return (
-    <div className="service-card">
-      <div className={`service-image ${imageClass}`}>
-        <img src={image} alt={title} />
+    <div className={`flex flex-col md:flex-row ${isRight ? 'md:flex-row-reverse' : ''} items-center bg-white rounded-lg shadow-md overflow-hidden`}> 
+      <div className="md:w-1/2 w-full flex justify-center items-center p-6">
+        <img src={image} alt={title} className="max-w-[220px] w-full h-auto object-contain" />
       </div>
-      <div className="service-info">
-        <h3>{title}</h3>
-        <p>{description}</p>
-        <button className="service-button">LEARN MORE</button>
+      <div className="md:w-1/2 w-full p-6 flex flex-col gap-4">
+        <h3 className="text-primary text-xl font-bold mb-2">{title}</h3>
+        <p className="text-dark text-base mb-4">{description}</p>
+        <button className="bg-secondary text-white font-semibold px-5 py-2 rounded shadow hover:bg-orange-500 transition w-max">
+          LEARN MORE
+        </button>
       </div>
     </div>
   );

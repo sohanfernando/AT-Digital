@@ -1,17 +1,21 @@
 // FAQItem.js
 import React, { useState } from 'react';
-import './FAQ.css'; // Import the CSS file
 
 function FAQItem({ question, answer }) {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className={`faq-item ${isOpen ? 'open' : ''}`}>
-      <button className="faq-question" onClick={() => setIsOpen(!isOpen)}>
-        {question}
-        <span className="faq-toggle">{isOpen ? '-' : '+'}</span>
+    <div className={`bg-white rounded-lg shadow p-4 transition-all ${isOpen ? 'ring-2 ring-primary' : ''}`}> 
+      <button
+        className="w-full flex justify-between items-center text-left text-dark font-medium text-base focus:outline-none"
+        onClick={() => setIsOpen(!isOpen)}
+      >
+        <span>{question}</span>
+        <span className="ml-4 text-primary text-xl font-bold">{isOpen ? '−' : '+'}</span>
       </button>
-      {isOpen && <p className="faq-answer">{answer}</p>}
+      {isOpen && (
+        <p className="mt-3 text-text-light text-sm leading-relaxed">{answer}</p>
+      )}
     </div>
   );
 }

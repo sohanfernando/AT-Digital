@@ -1,28 +1,33 @@
 import React from 'react';
-import './Footer.css';
 import atlogo from '../../images/at-logo.png'
 
 function Footer() {
   return (
-    <footer className="footer">
-      <div className="footer-section">
-        <div className="footer-brand">
-          <span className="footer-logo"> <img src={atlogo} alt="AT Digital Logo" />AT DIGITAL</span>
-          <p>Your goal is our target. Not anything in between. We use online marketing platforms and tools to achieve single objective - your business results.</p>
+    <footer className="w-full bg-primary text-white pt-10 pb-4 px-4 mt-12">
+      <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between gap-8 md:gap-0">
+        <div className="flex-1 mb-8 md:mb-0">
+          <div className="flex items-center gap-2 text-xl font-bold mb-2">
+            <img src={atlogo} alt="AT Digital Logo" className="h-8 w-8" />
+            <span className="tracking-wide">at digital</span>
+          </div>
+          <p className="text-accent-cuddly text-sm max-w-xs mt-2">
+            Your goal is our target. Not anything in between. We use online marketing platforms and tools to achieve single objective - your business results.
+          </p>
         </div>
-        <div className="footer-links">
-          <div className="footer-technologies">
-            <h4>Our Technologies</h4>
-            <ul>
+        {/* Responsive row for services/technologies at sm and above, column below sm */}
+        <div className="flex flex-col sm:flex-row gap-8 w-full sm:w-auto">
+          <div className="flex-1 min-w-[150px]">
+            <h4 className="text-lg font-semibold mb-2">Our Technologies</h4>
+            <ul className="space-y-1 text-accent-cuddly">
               <li>ReactJS</li>
               <li>Gatsby</li>
               <li>NextJS</li>
               <li>NodeJS</li>
             </ul>
           </div>
-          <div className="footer-services">
-            <h4>Our Services</h4>
-            <ul>
+          <div className="flex-1 min-w-[150px]">
+            <h4 className="text-lg font-semibold mb-2">Our Services</h4>
+            <ul className="space-y-1 text-accent-cuddly">
               <li>Social Media Marketing</li>
               <li>Web & Mobile App Development</li>
               <li>Data & Analytics</li>
@@ -30,8 +35,8 @@ function Footer() {
           </div>
         </div>
       </div>
-      <div className="footer-bottom">
-        <a href="/privacy">Privacy Policy</a> | <a href="/terms">Terms & Conditions</a>
+      <div className="border-t border-white/20 mt-8 pt-4 text-center text-xs text-accent-cuddly">
+        <a href="/privacy" className="hover:underline">Privacy Policy</a> | <a href="/terms" className="hover:underline">Terms & Conditions</a>
       </div>
     </footer>
   );
