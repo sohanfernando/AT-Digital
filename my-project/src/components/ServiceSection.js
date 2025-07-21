@@ -1,7 +1,7 @@
 import React from 'react';
-import ServiceCard from '../ServiceCard/ServiceCard';
-import image1 from '../../images/image1.png';
-import image2 from '../../images/image2.png';
+import ServiceCard from './ServiceCard';
+import image1 from '../images/image1.png';
+import image2 from '../images/image2.png';
 
 function ServiceSection() {
   const services = [

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import atlogo from '../../images/at-logo.png'
+import atlogo from '../images/at-logo.png'
 
 function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);

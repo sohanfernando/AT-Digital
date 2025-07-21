@@ -1,5 +1,5 @@
 import React from 'react';
-import atlogo from '../../images/at-logo.png'
+import atlogo from '../images/at-logo.png'
 
 function Footer() {
   return (
@@ -19,18 +19,18 @@ function Footer() {
           <div className="flex-1 min-w-[150px]">
             <h4 className="text-lg font-semibold mb-2">Our Technologies</h4>
             <ul className="space-y-1 text-accent-cuddly">
-              <li>ReactJS</li>
-              <li>Gatsby</li>
-              <li>NextJS</li>
-              <li>NodeJS</li>
+              <li className='cursor-pointer hover:text-white hover:underline'>ReactJS</li>
+              <li className='cursor-pointer hover:text-white hover:underline'>Gatsby</li>
+              <li className='cursor-pointer hover:text-white hover:underline'>NextJS</li>
+              <li className='cursor-pointer hover:text-white hover:underline'>NodeJS</li>
             </ul>
           </div>
           <div className="flex-1 min-w-[150px]">
             <h4 className="text-lg font-semibold mb-2">Our Services</h4>
             <ul className="space-y-1 text-accent-cuddly">
-              <li>Social Media Marketing</li>
-              <li>Web & Mobile App Development</li>
-              <li>Data & Analytics</li>
+              <li className='cursor-pointer hover:text-white hover:underline'>Social Media Marketing</li>
+              <li className='cursor-pointer hover:text-white hover:underline'>Web & Mobile App Development</li>
+              <li className='cursor-pointer hover:text-white hover:underline'>Data & Analytics</li>
             </ul>
           </div>
         </div>

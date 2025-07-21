@@ -1,6 +1,6 @@
 // Hero.js
 import React from 'react';
-import heroBackground from '../../images/hero-background.jpeg';
+import heroBackground from '../images/hero-background.jpeg';
 
 const DEFAULT_TITLE = 'We Crush Your Competitors, Goals, And Sales Records - Without The B.S.';
 const DEFAULT_BUTTON = 'GET FREE CONSULTATION';
